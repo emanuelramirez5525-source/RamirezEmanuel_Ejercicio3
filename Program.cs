@@ -51,26 +51,62 @@ double recargo = 0;
 switch (opcion)
 {
     case 1:
+        if (metodo == 1)
+        {
+            descuento = monto * 0.10;
 
-        break;
+        }
+        else if (metodo == 2)
+        {
+            descuento = monto * 0.08;
+        }
+            break;
 
     case 2:
 
+        if (metodo == 1)
+        {
+            descuento = monto * 0.08;
+                
+        }
+        else if (metodo == 2)
+        {
+            descuento = monto * 0.05;
+        }
 
-        break;
+
+
+
+
+            break;
 
     case 3:
-
+        descuento = monto * 0.05;
 
         break;
 
 
     case 4:
 
+        descuento = 0;
+
 
         break;
 
+    default:
 
+        Console.WriteLine("Cliente invalido");
 
-
+        break;
 }
+
+if (fraude == 2|| fraude == 3)
+{
+    if (descuento > 0)
+    {
+        descuento = 0;
+        recargo = monto * 0.12;
+    }
+}
+
+double total = monto - descuento + recargo;
