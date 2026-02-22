@@ -54,11 +54,19 @@ switch (opcion)
         if (metodo == 1)
         {
             descuento = monto * 0.10;
-
         }
         else if (metodo == 2)
         {
-            descuento = monto * 0.08;
+            descuento = monto * 0.07;
+        }
+
+        else if (metodo == 3)
+        {
+            descuento = monto * 0.05;
+        }
+        else
+        {
+            Console.WriteLine("Metodo de pago invalido");
         }
             break;
 
@@ -67,31 +75,65 @@ switch (opcion)
         if (metodo == 1)
         {
             descuento = monto * 0.08;
-                
         }
         else if (metodo == 2)
         {
             descuento = monto * 0.05;
         }
 
+        else if (metodo == 3)
+        {
+            descuento = monto * 0.04;
+        }
+        else
+        {
+            Console.WriteLine("Metodo de pago invalido");
+        }
 
-
-
-
-            break;
+        break;
 
     case 3:
-        descuento = monto * 0.05;
+
+        if (metodo == 1)
+        {
+            descuento = monto * 0.05;
+        }
+        else if (metodo == 2)
+        {
+            descuento = monto * 0.03;
+        }
+
+        else if (metodo == 3)
+        {
+            descuento = monto * 0.02;
+        }
+        else
+        {
+            Console.WriteLine("Metodo de pago invalido");
+        }
+
+
+
 
         break;
-
-
     case 4:
 
-        descuento = 0;
+        if (metodo == 1)
+        {
+            descuento = monto * 0.03;
+        }
+        else if (metodo == 2)
+        {
+            descuento = monto * 0.02;
+        }
 
+        else if (metodo == 3)
+        {
+            descuento = monto * 0.01;
+        }
+        
 
-        break;
+            break;
 
     default:
 
@@ -110,3 +152,8 @@ if (fraude == 2|| fraude == 3)
 }
 
 double total = monto - descuento + recargo;
+
+Console.WriteLine("FACTURA");
+Console.WriteLine("Descuetos aplicados: "+descuento);
+Console.WriteLine("Recargos: "+ recargo);
+Console.WriteLine("TOTAL FINAL: "+total);
